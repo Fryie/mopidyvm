@@ -1,3 +1,3 @@
-package { 'python':
-  ensure => 'latest'
+class { 'python':
+  pip => true
 }
