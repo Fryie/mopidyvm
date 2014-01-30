@@ -65,6 +65,6 @@ exec { '/usr/bin/python setup.py install':
 exec { '/usr/bin/chown vagrant /home/vagrant': }
 ->
 file { '/home/vagrant/.config/mopidy/mopidy.conf':
-  ensure => 'file',
-  source => '/vagrant/mopidy.conf'
+  ensure => 'link',
+  target => '/vagrant/mopidy.conf'
 }
